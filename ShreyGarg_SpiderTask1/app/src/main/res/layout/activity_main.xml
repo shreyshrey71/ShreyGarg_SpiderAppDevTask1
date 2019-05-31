@@ -5,14 +5,58 @@
     android:layout_width="match_parent"
     android:onClick="grav"
     android:id="@+id/lay"
+    android:background="#212121"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:id="@+id/top"
+        android:background="@android:color/holo_orange_dark"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/circle"
+        android:id="@+id/circle1"
+        android:layout_below="@id/top"
+        android:layout_toLeftOf="@id/circle2"
         android:layout_centerHorizontal="true"
         android:background="@drawable/circle_shape" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/circle2"
+        android:layout_below="@id/top"
+        android:layout_toLeftOf="@id/circle3"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_shape_4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/circle3"
+        android:layout_below="@id/top"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_shape_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/circle4"
+        android:layout_below="@id/top"
+        android:layout_toRightOf="@id/circle3"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_shape_3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/circle5"
+        android:layout_below="@id/top"
+        android:layout_toRightOf="@id/circle4"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_shape_2" />
 
 </RelativeLayout>

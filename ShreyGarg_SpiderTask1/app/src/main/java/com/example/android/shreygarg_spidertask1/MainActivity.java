@@ -8,6 +8,9 @@ import android.view.animation.TranslateAnimation;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,19 +18,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-int i=0;
+    int[] a={0,0,0,0,0};
+
     public void grav(View view)
-    {i++;
-        RelativeLayout r = (RelativeLayout) findViewById(R.id.lay);
-        TextView t = (TextView) findViewById(R.id.circle);
-        if(i%2!=0) {
-            t.animate().translationY(r.getHeight()-150);
-            t.animate().setDuration(2000);
+    {
+     Random r = new Random();
+     int j= r.nextInt(5);
+
+        TextView[] t = new TextView[5];
+
+        t[0] = (TextView) findViewById(R.id.circle1);
+        t[1] = (TextView) findViewById(R.id.circle2);
+        t[2] = (TextView) findViewById(R.id.circle3);
+        t[3] = (TextView) findViewById(R.id.circle4);
+        t[4] = (TextView) findViewById(R.id.circle5);
+
+        if((++a[j])%2!=0) {
+            t[j].animate().translationY(view.getHeight()-150);
+            t[j].animate().setDuration(1500);
         }
         else
         {
-            t.animate().translationY(0);
-            t.animate().setDuration(2000);
+            t[j].animate().translationY(0);
+            t[j].animate().setDuration(1500);
         }
     }
 }
