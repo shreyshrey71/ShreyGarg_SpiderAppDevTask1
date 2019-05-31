@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         t[4] = (TextView) findViewById(R.id.circle5);
 
         if((++a[j])%2!=0) {
-            t[j].animate().translationY(view.getHeight()-150);
+            t[j].animate().translationY(view.getHeight()-200);
             t[j].animate().setDuration(1500);
         }
         else
